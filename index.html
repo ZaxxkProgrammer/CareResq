@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Button Example</title>
+  <style>
+    html, body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-image: url(c.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    .play-button,
+    .learn-more-button,
+    .video-tutorial-button {
+      display: block;
+      margin: 1cm auto;
+      padding: 20px 35px;
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+      animation-name: buttonAnimation;
+      animation-duration: 10s;
+      animation-fill-mode: both;
+    }
+
+    .play-button:hover,
+    .learn-more-button:hover,
+    .video-tutorial-button:hover {
+      background-color: #c82513;
+    }
+      
+    .button-container {
+      text-align: center;
+      position: fixed;
+      bottom: 3cm;
+      width: 100%;
+      animation-name: buttonAreaAnimation;
+      animation-duration: 2s;
+      animation-fill-mode: both;
+    }
+   
+    .question-button {
+      position: fixed;
+      top: 1cm;
+      right: 4cm;
+      padding: 12px 18px;
+      background-color: #000000; 
+      color:  #fff;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
+
+    .question-button:hover {
+      background-color: #333333;
+    }
+
+    .X-button {
+      position: fixed;
+      top: 1cm;
+      right: 2cm;
+      padding: 12px 18px;
+      background-color: #c91b1b; 
+      color:  #fff;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s;
+    }
+
+    .X-button:hover {
+      background-color: #a21515;
+    }
+
+    @keyframes buttonAnimation {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.1);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    @keyframes buttonAreaAnimation {
+      0% {
+        opacity: 0;
+        transform: translateY(100px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+  <script>
+    function navigateToQuestionMark() {
+      window.location.href = 'question mark.html';
+    }
+
+    function navigateToXMark() {
+      window.location.href = 'CAREp2.html';
+    }
+    
+    function navigateToVideoLearn() {
+      window.location.href = 'VIdeoLearn.html';
+    }
+    
+    function navigateToVideoTutorial() {
+      window.location.href = 'tutorial.html';
+    }
+    
+    function navigateToGamePage() {
+      window.location.href = 'gamepage.html';
+    }
+  </script>
+</head>
+<body>
+  <div class="button-container">
+    <button type="button" class="play-button" onclick="navigateToGamePage()">Play</button>
+    <button type="button" class="learn-more-button" onclick="navigateToVideoLearn()">Learn More</button>
+    <button type="button" class="video-tutorial-button" onclick="navigateToVideoTutorial()">Watch Video Tutorial</button>
+  </div>
+
+  <div class="X-button">
+    <button type="button" class="question-button" onclick="navigateToQuestionMark()">&#63;</button>
+    <button type="button" class="X-button"onclick="navigateToXMark()">&#10006;</button>
+  </div>
+
+</body>
+</html>
